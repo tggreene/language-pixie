@@ -1,12 +1,12 @@
 {
   "name": "language-pixie",
-  "version": "0.1.0",
+  "version": "0.21.0",
   "description": "Pixie language support in Atom",
   "engines": {
     "atom": "*",
     "node": "*"
   },
-  "homepage": "http://github.com/tggreene/language-pixie",
+  "homepage": "https://github.com/tggreene/language-pixie",
   "repository": {
     "type": "git",
     "url": "https://github.com/tggreene/language-pixie"
