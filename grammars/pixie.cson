@@ -1,16 +1,11 @@
-'scopeName': 'source.clojure'
+'scopeName': 'source.pixie'
 'fileTypes': [
-  'boot'
-  'clj'
-  'cljc'
-  'cljs'
-  'cljx'
-  'clojure'
-  'edn'
+  'pxi'
+  'pixie'
 ]
 'foldingStartMarker': '\\(\\s*$'
 'foldingStopMarker': '^\\s*\\)'
-'name': 'Clojure'
+'name': 'Pixie'
 'patterns': [
   {
     'include': '#comment'
@@ -68,50 +63,50 @@
   'comment':
     'captures':
       '1':
-        'name': 'punctuation.definition.comment.clojure'
+        'name': 'punctuation.definition.comment.pixie'
     'match': '(;).*$\\n?'
-    'name': 'comment.line.semicolon.clojure'
+    'name': 'comment.line.semicolon.pixie'
   'constants':
     'patterns': [
       {
         'match': '(nil)(?=(\\s|\\)|\\]|\\}))'
-        'name': 'constant.language.nil.clojure'
+        'name': 'constant.language.nil.pixie'
       }
       {
         'match': '(true|false)'
-        'name': 'constant.language.boolean.clojure'
+        'name': 'constant.language.boolean.pixie'
       }
       {
         'match': '(-?\\d+/\\d+)'
-        'name': 'constant.numeric.ratio.clojure'
+        'name': 'constant.numeric.ratio.pixie'
       }
       {
         'match': '(-?\\d+[rR][0-9a-zA-Z]+)'
-        'name': 'constant.numeric.arbitrary-radix.clojure'
+        'name': 'constant.numeric.arbitrary-radix.pixie'
       }
       {
         'match': '(-?0[xX][0-9a-fA-F]+)'
-        'name': 'constant.numeric.hexadecimal.clojure'
+        'name': 'constant.numeric.hexadecimal.pixie'
       }
       {
         'match': '(-?0\\d+)'
-        'name': 'constant.numeric.octal.clojure'
+        'name': 'constant.numeric.octal.pixie'
       }
       {
         'match': '(-?\\d+\\.\\d+([eE][+-]?\\d+)?M)'
-        'name': 'constant.numeric.bigdecimal.clojure'
+        'name': 'constant.numeric.bigdecimal.pixie'
       }
       {
         'match': '(-?\\d+\\.\\d+([eE][+-]?\\d+)?)'
-        'name': 'constant.numeric.double.clojure'
+        'name': 'constant.numeric.double.pixie'
       }
       {
         'match': '(-?\\d+N)'
-        'name': 'constant.numeric.bigint.clojure'
+        'name': 'constant.numeric.bigint.pixie'
       }
       {
         'match': '(-?\\d+)'
-        'name': 'constant.numeric.long.clojure'
+        'name': 'constant.numeric.long.pixie'
       }
       { # separating the pattern for reuse
         'include': '#keyword'
@@ -119,33 +114,33 @@
     ]
   'keyword':
     'match': '(?<=(\\s|\\(|\\[|\\{)):[a-zA-Z0-9\\#\\.\\-\\_\\:\\+\\=\\>\\<\\/\\!\\?\\*]+(?=(\\s|\\)|\\]|\\}|\\,))'
-    'name': 'constant.keyword.clojure'
+    'name': 'constant.keyword.pixie'
   'keyfn':
     'patterns': [
       {
         'match': '(?<=(\\s|\\(|\\[|\\{))(if(-[-a-z\\?]*)?|when(-[-a-z]*)?|for(-[-a-z]*)?|cond|do|let(-[-a-z\\?]*)?|binding|loop|recur|fn|throw[a-z\\-]*|try|catch|finally|([a-z]*case))(?=(\\s|\\)|\\]|\\}))'
-        'name': 'storage.control.clojure'
+        'name': 'storage.control.pixie'
       }
       {
         'match': '(?<=(\\s|\\(|\\[|\\{))(declare-?|(in-)?ns|import|use|require|load|compile|(def[a-z\\-]*))(?=(\\s|\\)|\\]|\\}))'
-        'name': 'keyword.control.clojure'
+        'name': 'keyword.control.pixie'
       }
     ]
   'dynamic-variables':
     'match': '\\*[\\w\\.\\-\\_\\:\\+\\=\\>\\<\\!\\?\\d]+\\*'
-    'name': 'meta.symbol.dynamic.clojure'
+    'name': 'meta.symbol.dynamic.pixie'
   'map':
     'begin': '(\\{)'
     'beginCaptures':
       '1':
-        'name': 'punctuation.section.map.begin.clojure'
+        'name': 'punctuation.section.map.begin.pixie'
     'end': '(\\}(?=[\\}\\]\\)\\s]*(?:;|$)))|(\\})'
     'endCaptures':
       '1':
-        'name': 'punctuation.section.map.end.trailing.clojure'
+        'name': 'punctuation.section.map.end.trailing.pixie'
       '2':
-        'name': 'punctuation.section.map.end.clojure'
-    'name': 'meta.map.clojure'
+        'name': 'punctuation.section.map.end.pixie'
+    'name': 'meta.map.pixie'
     'patterns': [
       {
         'include': '$self'
@@ -157,14 +152,14 @@
         'begin': '(\\^\\{)'
         'beginCaptures':
           '1':
-            'name': 'punctuation.section.metadata.map.begin.clojure'
+            'name': 'punctuation.section.metadata.map.begin.pixie'
         'end': '(\\}(?=[\\}\\]\\)\\s]*(?:;|$)))|(\\})'
         'endCaptures':
           '1':
-            'name': 'punctuation.section.metadata.map.end.trailing.clojure'
+            'name': 'punctuation.section.metadata.map.end.trailing.pixie'
           '2':
-            'name': 'punctuation.section.metadata.map.end.clojure'
-        'name': 'meta.metadata.map.clojure'
+            'name': 'punctuation.section.metadata.map.end.pixie'
+        'name': 'meta.metadata.map.pixie'
         'patterns': [
           {
             'include': '$self'
@@ -174,7 +169,7 @@
       {
         'begin': '(\\^)'
         'end': '(\\s)'
-        'name': 'meta.metadata.simple.clojure'
+        'name': 'meta.metadata.simple.pixie'
         'patterns': [
           {
             'include': '#keyword'
@@ -189,18 +184,18 @@
     'begin': '([\'``]\\()'
     'beginCaptures':
       '1':
-        'name': 'punctuation.section.expression.begin.clojure'
+        'name': 'punctuation.section.expression.begin.pixie'
     'end': '(\\))(\\n)|(\\)(?=[\\}\\]\\)\\s]*(?:;|$)))|(\\))'
     'endCaptures':
       '1':
-        'name': 'punctuation.section.expression.end.trailing.clojure'
+        'name': 'punctuation.section.expression.end.trailing.pixie'
       '2':
-        'name': 'meta.after-expression.clojure'
+        'name': 'meta.after-expression.pixie'
       '3':
-        'name': 'punctuation.section.expression.end.trailing.clojure'
+        'name': 'punctuation.section.expression.end.trailing.pixie'
       '4':
-        'name': 'punctuation.section.expression.end.clojure'
-    'name': 'meta.quoted-expression.clojure'
+        'name': 'punctuation.section.expression.end.pixie'
+    'name': 'meta.quoted-expression.pixie'
     'patterns': [
       {
         'include': '$self'
@@ -209,7 +204,7 @@
   'regexp':
     'begin': '#\\"'
     'end': '\\"'
-    'name': 'string.regexp.clojure'
+    'name': 'string.regexp.pixie'
     'patterns': [
       {
         'include': '#regexp_escaped_char'
@@ -217,19 +212,19 @@
     ]
   'regexp_escaped_char':
     'match': '\\\\(\\")'
-    'name': 'string.regexp.clojure'
+    'name': 'string.regexp.pixie'
   'set':
     'begin': '(\\#\\{)'
     'beginCaptures':
       '1':
-        'name': 'punctuation.section.set.begin.clojure'
+        'name': 'punctuation.section.set.begin.pixie'
     'end': '(\\}(?=[\\}\\]\\)\\s]*(?:;|$)))|(\\})'
     'endCaptures':
       '1':
-        'name': 'punctuation.section.set.end.trailing.clojure'
+        'name': 'punctuation.section.set.end.trailing.pixie'
       '2':
-        'name': 'punctuation.section.set.end.clojure'
-    'name': 'meta.set.clojure'
+        'name': 'punctuation.section.set.end.pixie'
+    'name': 'meta.set.pixie'
     'patterns': [
       {
         'include': '$self'
@@ -239,26 +234,26 @@
     'begin': '(\\()'
     'beginCaptures':
       '1':
-        'name': 'punctuation.section.expression.begin.clojure'
+        'name': 'punctuation.section.expression.begin.pixie'
     'end': '(\\))(\\n)|(\\)(?=[\\}\\]\\)\\s]*(?:;|$)))|(\\))'
     'endCaptures':
       '1':
-        'name': 'punctuation.section.expression.end.trailing.clojure'
+        'name': 'punctuation.section.expression.end.trailing.pixie'
       '2':
-        'name': 'meta.after-expression.clojure'
+        'name': 'meta.after-expression.pixie'
       '3':
-        'name': 'punctuation.section.expression.end.trailing.clojure'
+        'name': 'punctuation.section.expression.end.trailing.pixie'
       '4':
-        'name': 'punctuation.section.expression.end.clojure'
-    'name': 'meta.expression.clojure'
+        'name': 'punctuation.section.expression.end.pixie'
+    'name': 'meta.expression.pixie'
     'patterns': [
       {
         'begin': '(?<=\\()(ns|def|def-|defn|defn-|defvar|defvar-|defmacro|defmacro-|deftest)\\s+'
         'beginCaptures':
           '1':
-            'name': 'keyword.control.clojure'
+            'name': 'keyword.control.pixie'
         'end': '(?=\\))'
-        'name': 'meta.definition.global.clojure'
+        'name': 'meta.definition.global.pixie'
         'patterns': [
           {
             # there may be some metadata before an actual definition
@@ -271,7 +266,7 @@
             # recognizing a symbol as being defined here
             # copied and pasted from #symbol, screw it
             'match': '([\\w\\.\\-\\_\\:\\+\\=\\>\\<\\!\\?\\*][\\w\\.\\-\\_\\:\\+\\=\\>\\<\\!\\?\\*\\d]+)'
-            'name': 'entity.global.clojure'
+            'name': 'entity.global.pixie'
           }
           {
             'include': '$self'
@@ -297,7 +292,7 @@
         'match': '(?<=\\()(.+?)(?=\\s|\\))'
         'captures':
           '1':
-            'name': 'entity.name.function.clojure'
+            'name': 'entity.name.function.pixie'
         'patterns': [
           {
             'include': '$self'
@@ -311,23 +306,23 @@
   'shebang-comment':
     'captures':
       '1':
-        'name': 'punctuation.definition.comment.shebang.clojure'
+        'name': 'punctuation.definition.comment.shebang.pixie'
     'match': '^(\\#!).*$\\n?'
-    'name': 'comment.line.semicolon.clojure'
+    'name': 'comment.line.semicolon.pixie'
   'string':
     'begin': '(?<!\\\\)(")'
     'beginCaptures':
       '1':
-        'name': 'punctuation.definition.string.begin.clojure'
+        'name': 'punctuation.definition.string.begin.pixie'
     'end': '(")'
     'endCaptures':
       '1':
-        'name': 'punctuation.definition.string.end.clojure'
-    'name': 'string.quoted.double.clojure'
+        'name': 'punctuation.definition.string.end.pixie'
+    'name': 'string.quoted.double.pixie'
     'patterns': [
       {
         'match': '\\\\.'
-        'name': 'constant.character.escape.clojure'
+        'name': 'constant.character.escape.pixie'
       }
     ]
   'namespace-symbol':
@@ -337,31 +332,31 @@
         'match': '([\\w\\.\\-\\_\\:\\+\\=\\>\\<\\!\\?\\*][\\w\\.\\-\\_\\:\\+\\=\\>\\<\\!\\?\\*\\d]+)/'
         'captures':
           '1':
-            'name': 'meta.symbol.namespace.clojure'
+            'name': 'meta.symbol.namespace.pixie'
       }
     ]
   'symbol':
     'patterns': [
       {
         'match': '([\\w\\.\\-\\_\\:\\+\\=\\>\\<\\!\\?\\*][\\w\\.\\-\\_\\:\\+\\=\\>\\<\\!\\?\\*\\d]+)'
-        'name': 'meta.symbol.clojure'
+        'name': 'meta.symbol.pixie'
       }
     ]
   'var':
     'match': '(?<=(\\s|\\(|\\[|\\{)\\#)\'[a-zA-Z0-9\\.\\-\\_\\:\\+\\=\\>\\<\\/\\!\\?\\*]+(?=(\\s|\\)|\\]|\\}))'
-    'name': 'meta.var.clojure'
+    'name': 'meta.var.pixie'
   'vector':
     'begin': '(\\[)'
     'beginCaptures':
       '1':
-        'name': 'punctuation.section.vector.begin.clojure'
+        'name': 'punctuation.section.vector.begin.pixie'
     'end': '(\\](?=[\\}\\]\\)\\s]*(?:;|$)))|(\\])'
     'endCaptures':
       '1':
-        'name': 'punctuation.section.vector.end.trailing.clojure'
+        'name': 'punctuation.section.vector.end.trailing.pixie'
       '2':
-        'name': 'punctuation.section.vector.end.clojure'
-    'name': 'meta.vector.clojure'
+        'name': 'punctuation.section.vector.end.pixie'
+    'name': 'meta.vector.pixie'
     'patterns': [
       {
         'include': '$self'

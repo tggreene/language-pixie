@@ -1,19 +1,19 @@
 {
-  "name": "language-clojure",
-  "version": "0.21.0",
-  "description": "Clojure language support in Atom",
+  "name": "language-pixie",
+  "version": "0.1.0",
+  "description": "Pixie language support in Atom",
   "engines": {
     "atom": "*",
     "node": "*"
   },
-  "homepage": "http://atom.github.io/language-clojure",
+  "homepage": "http://github.com/tggreene/language-pixie",
   "repository": {
     "type": "git",
-    "url": "https://github.com/atom/language-clojure"
+    "url": "https://github.com/tggreene/language-pixie"
   },
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/atom/language-clojure/issues"
+    "url": "https://github.com/tggreene/language-pixie/issues"
   },
   "devDependencies": {
     "coffeelint": "^1.10.1"

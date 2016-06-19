@@ -1,4 +1,4 @@
-'.source.clojure':
+'.source.pixie':
   'ns':
     'prefix': 'ns'
     'body': """
