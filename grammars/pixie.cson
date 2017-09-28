@@ -64,7 +64,7 @@
     'captures':
       '1':
         'name': 'punctuation.definition.comment.pixie'
-    'match': '(;).*$\\n?'
+    'match': '(;).*$'
     'name': 'comment.line.semicolon.pixie'
   'constants':
     'patterns': [
@@ -185,15 +185,13 @@
     'beginCaptures':
       '1':
         'name': 'punctuation.section.expression.begin.pixie'
-    'end': '(\\))(\\n)|(\\)(?=[\\}\\]\\)\\s]*(?:;|$)))|(\\))'
+    'end': '(\\))$|(\\)(?=[\\}\\]\\)\\s]*(?:;|$)))|(\\))'
     'endCaptures':
       '1':
         'name': 'punctuation.section.expression.end.trailing.pixie'
       '2':
-        'name': 'meta.after-expression.pixie'
-      '3':
         'name': 'punctuation.section.expression.end.trailing.pixie'
-      '4':
+      '3':
         'name': 'punctuation.section.expression.end.pixie'
     'name': 'meta.quoted-expression.pixie'
     'patterns': [
@@ -235,15 +233,13 @@
     'beginCaptures':
       '1':
         'name': 'punctuation.section.expression.begin.pixie'
-    'end': '(\\))(\\n)|(\\)(?=[\\}\\]\\)\\s]*(?:;|$)))|(\\))'
+    'end': '(\\))$|(\\)(?=[\\}\\]\\)\\s]*(?:;|$)))|(\\))'
     'endCaptures':
       '1':
         'name': 'punctuation.section.expression.end.trailing.pixie'
       '2':
-        'name': 'meta.after-expression.pixie'
-      '3':
         'name': 'punctuation.section.expression.end.trailing.pixie'
-      '4':
+      '3':
         'name': 'punctuation.section.expression.end.pixie'
     'name': 'meta.expression.pixie'
     'patterns': [
@@ -307,7 +303,7 @@
     'captures':
       '1':
         'name': 'punctuation.definition.comment.shebang.pixie'
-    'match': '^(\\#!).*$\\n?'
+    'match': '^(\\#!).*$'
     'name': 'comment.line.semicolon.pixie'
   'string':
     'begin': '(?<!\\\\)(")'

@@ -145,7 +145,7 @@ describe "Pixie grammar", ->
     # Entire expression on one line.
     {tokens} = grammar.tokenizeLine "#{startsWith}foo, bar#{endsWith}"
 
-    [start, mid..., end, after] = tokens
+    [start, mid..., end, whitespace] = tokens
 
     expect(start).toEqual value: startsWith, scopes: ["source.pixie", "meta.#{metaScope}.pixie", "punctuation.section.#{puncScope}.begin.pixie"]
     expect(end).toEqual value: endsWith, scopes: ["source.pixie", "meta.#{metaScope}.pixie", "punctuation.section.#{puncScope}.end.trailing.pixie"]
@@ -156,14 +156,14 @@ describe "Pixie grammar", ->
     # Expression broken over multiple lines.
     tokens = grammar.tokenizeLines("#{startsWith}foo\n bar#{endsWith}")
 
-    [start, mid..., after] = tokens[0]
+    [start, mid...] = tokens[0]
 
     expect(start).toEqual value: startsWith, scopes: ["source.pixie", "meta.#{metaScope}.pixie", "punctuation.section.#{puncScope}.begin.pixie"]
 
     for token in mid
       expect(token.scopes.slice(0, 2)).toEqual ["source.pixie", "meta.#{metaScope}.pixie"]
 
-    [mid..., end, after] = tokens[1]
+    [mid..., end] = tokens[1]
 
     expect(end).toEqual value: endsWith, scopes: ["source.pixie", "meta.#{metaScope}.pixie", "punctuation.section.#{puncScope}.end.trailing.pixie"]
 
